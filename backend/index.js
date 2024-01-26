@@ -1,13 +1,14 @@
 import express from "express";
 import mysql from 'mysql2';
 import cors from 'cors';
+import env from 'env';
 
 const port = 8800;
 const app = express()
 const db = mysql.createConnection({
   host:"localhost",
   user:"root",
-  password:"jai@mysql725",
+  password: process.env.MYSQL_CONNECTION_PASSWORD,
   database:"test"
 });
 
