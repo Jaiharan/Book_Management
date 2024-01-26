@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  color: white;
+  background-color: #0f0e13;
+  background-image: radial-gradient(at 0 0,#100f15 0,transparent 50%),radial-gradient(at 50% 0,#2f3e6a 0,transparent 50%),radial-gradient(at 100% 0,#722741 0,transparent 50%);
+  transition: all ease 0.3s;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: medium;
+  height: max-content;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000f0;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@layer base {
+  h1 {
+    @apply  text-5xl flex justify-center items-center font-bold m-16;
+  }
+  img {
+    @apply w-56 h-72 object-cover bg-slate-400;
+  }
+  button {
+    @apply hover:shadow-md hover:shadow-gray-400 border;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.book{
+  cursor: pointer;
+}
+
+input{
+  background: rgba(0, 0, 0, 0.067);
+  border: 0.5px solid ;
+  border-radius: 2px;
+  width: 500px;
+  height: 45px;
+  font-size: larger;
+  padding: 2px;
+}
+
+input:hover{
+  background:  rgba(0, 0, 0, 0.200);
+}
+
+input:focus{
+  background: rgba(0, 0, 0, 0.195);
+}
+
+button{
+  background: black;
+  font-size: medium;
+  padding: 5px 10px;
+  font-weight: 600;
+  border-radius: 10px;
+  margin: 5px;
+  transition: all ease 0.4s;
+}
+
+
+button:hover{
+  color: black;
+  background: white;
+}
+
+button:focus{
+  color: black;
+  background: white;
+}
