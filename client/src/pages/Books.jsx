@@ -34,7 +34,7 @@ const handleDelete = async (id) =>{
       <h1 className='title'>Book Shop</h1>
       <div className='books flex gap-3'>{books.map(book=>(
         <div className='book flex-1 flex flex-col gap-3 items-center' key={book.id}>
-            {book.cover && <img src={book.cover} className=' rounded-md' alt=''/>}
+            {book.cover && <img src={book.cover} className=' rounded-md hover:scale-105' alt=''/>}
             <h2 className=' text-xl font-bold'>{book.title}</h2>
             <p>{book.desc}</p>
             <span>{book.price}</span>
